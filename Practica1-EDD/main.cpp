@@ -66,6 +66,7 @@ int main() {
     Juego juego;
     juego.juego(jugadores, pilaPalabras);
 
+    std::cout <<"FIN DEL JUEGO GRACAS POR JUGAR";
 
     return 0;
 }

@@ -32,7 +32,7 @@ public:
 
     T desencolar() {
         if (frente == nullptr) {
-            throw "La cola está vacía";
+            throw "LA COLA ESTA VACIA";
         }
         Nodo* temp = frente;
         T dato = frente->dato;

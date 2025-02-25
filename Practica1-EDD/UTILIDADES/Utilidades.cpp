@@ -66,13 +66,17 @@ void Utilidades::utilidades(std::vector<Jugador> &jugadores, ListaEnlazada<Ficha
     fichas.mezclar();
 
     int numJugadores = jugadores.size();
-    int fichasPorJugador = fichas.obtenerTamano() / numJugadores;
+    int totalFichas = fichas.obtenerTamano();
+    int fichasPorJugador = totalFichas / numJugadores;
+    int fichasSobrantes = totalFichas % numJugadores;
 
     ListaEnlazada<Ficha>::Nodo *actual = fichas.obtenerCabeza();
-    for (int jugadorIndex = 0; jugadorIndex < numJugadores; ++jugadorIndex) {
-        int id = 1;
 
-        for (int j = 0; j < fichasPorJugador && actual != nullptr; ++j) {
+    for (int jugadorIndex = 0; jugadorIndex < numJugadores; ++jugadorIndex) {
+        int cantidadARepartir = fichasPorJugador + (fichasSobrantes > 0 ? 1 : 0);
+        fichasSobrantes = std::max(0, fichasSobrantes - 1);
+        int id = 1;
+        for (int j = 0; j < cantidadARepartir && actual != nullptr; ++j) {
             actual->dato.id = id++;
             jugadores[jugadorIndex].agregarFicha(actual->dato);
             actual = actual->siguiente;
