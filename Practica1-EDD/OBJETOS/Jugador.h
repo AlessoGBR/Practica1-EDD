@@ -14,7 +14,7 @@ class Jugador {
     public:
         std::string nombre;
         int puntuacion;
-        int movimientos;
+        int movimientos = 0;
 
         Jugador(std::string nombre, int puntuacion);
 

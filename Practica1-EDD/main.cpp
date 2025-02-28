@@ -39,6 +39,9 @@ int main() {
         std::cin.ignore();
     } while (numJugadores < 2 || numJugadores > 5);
 
+    // El ingreso de los jugadores es constante ya que solo
+    // se podran jugar de 2 a 5 jugadores
+    // Notacion O(1)
     std::vector<Jugador> jugadores;
     for (int i = 0; i < numJugadores; ++i) {
         std::string nombre;
@@ -65,7 +68,7 @@ int main() {
     utilidades.utilidades(jugadores, fichas);
     Juego juego;
     juego.juego(jugadores, pilaPalabras);
-
+    std::cout << "----------------------------------\n";
     std::cout <<"FIN DEL JUEGO GRACAS POR JUGAR";
 
     return 0;
