@@ -1,16 +1,11 @@
-# Compilador
 CXX = g++
-
-# Opciones de compilación
 CXXFLAGS = -Wall -Wextra -std=c++14 -g
 
-# Directorios
 SRC_DIR = .
 OBJETOS_DIR = OBJETOS
 UTILIDADES_DIR = UTILIDADES
 BIN_DIR = bin
 
-# Archivos fuente
 SRCS = $(SRC_DIR)/main.cpp \
        $(OBJETOS_DIR)/Jugador.cpp \
        $(OBJETOS_DIR)/Tablero.cpp \
@@ -21,27 +16,21 @@ SRCS = $(SRC_DIR)/main.cpp \
        $(UTILIDADES_DIR)/Juego.cpp \
        $(UTILIDADES_DIR)/Utilidades.cpp
 
-# Archivos objeto
 OBJS = $(SRCS:.cpp=.o)
 
-# Nombre del ejecutable
 TARGET = $(BIN_DIR)/Practical-EDD
 
-# Regla principal
-all: $(TARGET)
+all: $(BIN_DIR) $(TARGET)
 
-# Regla para compilar el ejecutable
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
-# Regla para compilar archivos .cpp a .o
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Limpiar archivos generados
+$(BIN_DIR):
+	mkdir -p $(BIN_DIR)
+
 clean:
 	rm -f $(OBJS) $(TARGET)
 
-# Crear directorio bin si no existe
-$(BIN_DIR):
-	mkdir -p $(BIN_DIR)
