@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Objetos/Jugador.h"
 #include <vector>
-#include "Estructuras/Cola.h"
+#include "Estructuras/Cola/Cola.h"
+#include "UTILIDADES/Juego.h"
 
 void inicioJuego() {
     std::string arte = R"(
@@ -21,24 +22,28 @@ void inicioJuego() {
 int main() {
     inicioJuego();
     int numJugadores;
+    int fila;
+    int columna;
     do {
         std::cout << "INGRESE LA CANTIDAD DE JUGADORES (2-5): ";
         std::cin >> numJugadores;
         std::cin.ignore();
     } while (numJugadores < 2 || numJugadores > 5);
-
-    // El ingreso de los jugadores es constante ya que solo
-    // se podran jugar de 2 a 5 jugadores
-    // Notacion O(1)
-    Cola<Jugador> cola;
+    std::vector<Jugador> jugadores;
     for (int i = 0; i < numJugadores; ++i) {
         std::string nombre;
         std::cout << "INGRESE EL NOMBRE DEL JUGADOR " << (i + 1) << ": ";
         std::getline(std::cin, nombre);
-        char primerCaracter = tolower(nombre.at(0));
-        cola.encolar(Jugador(nombre, primerCaracter));
+        char primerCaracter = toupper(nombre.at(0));
+        jugadores.push_back(Jugador(nombre, primerCaracter));
     }
+    std::cout << "MINIMO DE 3*3" << std::endl;
+    std::cout << "INGRESE EL TAMANIO DE LAS FILAS: " << std::endl;
+    std::cin >> fila;
+    std::cout << "INGRESE EL TAMANIO DE LAS COLUMNAS: " << std::endl;
+    std::cin >> columna;
+    Juego juego = Juego(fila, columna, jugadores);
 
-
+    juego.menu();
     return 0;
 }

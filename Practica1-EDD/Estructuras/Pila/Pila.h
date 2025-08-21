@@ -7,33 +7,26 @@
 
 #include <iostream>
 
-template<typename T>
-class Nodo {
-public:
-    T dato;
-    Nodo *siguiente;
+#include "NodoPila.h"
 
-    Nodo(T dato) : dato(dato), siguiente(nullptr) {
-    }
-};
-
-template<typename T>
 class Pila {
 private:
-    Nodo<T> *cima;
+    NodoPila* cima;
 
 public:
     Pila();
 
     ~Pila();
 
-    void apilar(T dato);
+    void apilar(PowerUp dato);
 
-    T desapilar();
+    PowerUp desapilar();
 
     bool estaVacia() const;
 
     void mostrar() const;
+
+
 };
 
 

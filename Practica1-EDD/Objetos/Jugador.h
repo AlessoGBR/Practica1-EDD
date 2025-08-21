@@ -5,16 +5,21 @@
 #ifndef PRACTICA1_EDD_JUGADOR_H
 #define PRACTICA1_EDD_JUGADOR_H
 #include <string>
+using namespace std;
+#include "../Estructuras/Pila/Pila.h"
 
 
 class Jugador {
 public:
-    std::string nombre;
+    string nombre;
+    Pila *poderes;
     char inicial;
     int puntuacion;
-    Jugador(std::string nombre, char inicial);
+    Jugador(string nombre, char inicial);
+    Jugador(string nombre);
     void mostrarJugador();
-    void pilaPower();
+    void mostrarPuntuacion() const;
+    void mostrarPoderes() const;
 };
 
 

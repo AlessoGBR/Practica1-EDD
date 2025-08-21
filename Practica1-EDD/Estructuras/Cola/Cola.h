@@ -5,6 +5,8 @@
 #ifndef COLA_H
 #define COLA_H
 #include <iostream>
+#include "../../Objetos/Jugador.h"
+#include "NodoCola.h"
 
 
 template<typename T>
@@ -32,7 +34,7 @@ public:
     }
 
     void encolar(T dato) {
-        Nodo *nuevoNodo = new Nodo(dato);
+        Nodo* nuevoNodo = new Nodo(dato);
         if (final == nullptr) {
             frente = final = nuevoNodo;
         } else {
@@ -45,7 +47,7 @@ public:
         if (frente == nullptr) {
             std::cout << "LA COLA ESTA VACIA";
         }
-        Nodo *temp = frente;
+        Nodo* temp = frente;
         T dato = frente->dato;
         frente = frente->siguiente;
         if (frente == nullptr) {
@@ -64,16 +66,15 @@ public:
             std::cout << "LA COLA ESTA VACIA" << std::endl;
             return;
         }
-
-        Nodo *actual = frente;
+        Nodo* actual = frente;
         std::cout << "COLA ACTUAL: " << std::endl;
         while (actual != nullptr) {
-            actual->dato.mostrarJugador();
+            actual->dato->mostrarJugador();
             actual = actual->siguiente;
         }
         std::cout << std::endl;
     }
-};
 
+};
 
 #endif //COLA_H

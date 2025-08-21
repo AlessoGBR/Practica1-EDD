@@ -7,11 +7,24 @@
 #include <iostream>
 #include <ostream>
 
-Jugador::Jugador(std::string nombre, char inicial) : nombre(nombre), inicial(inicial) {
-    puntuacion = 0;
-}
 
+Jugador::Jugador(string nombre, char inicial) : nombre(nombre), inicial(inicial) {
+    this->nombre = nombre;
+    this->inicial = inicial;
+    this->puntuacion = 0;
+    this->poderes = new Pila();
+}
 
 void Jugador::mostrarJugador() {
     std::cout << "JUGADOR: " << nombre << " PUNTUACION: " << puntuacion << " CARACTER: " << inicial << std::endl;
 }
+
+void Jugador::mostrarPuntuacion() const {
+    std::cout << "PUNTUACION: " << this->puntuacion << std::endl;
+}
+
+void Jugador::mostrarPoderes() const {
+    //this->poderes->mostrar();
+}
+
+
