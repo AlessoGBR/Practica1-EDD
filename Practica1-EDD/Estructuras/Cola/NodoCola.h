@@ -4,14 +4,13 @@
 
 #ifndef PRACTICA1_EDD_NODO_H
 #define PRACTICA1_EDD_NODO_H
-#include <string>
-#include "../../Objetos/Jugador.h"
 
+template<typename T>
 class NodoCola {
 public:
-    Jugador* dato;
+    T dato;
     NodoCola* siguiente;
-    NodoCola(Jugador* d): dato(d), siguiente(nullptr) {}
+    NodoCola(T d): dato(d), siguiente(nullptr) {}
 };
 
 

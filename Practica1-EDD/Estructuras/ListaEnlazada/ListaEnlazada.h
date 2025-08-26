@@ -24,15 +24,28 @@ public:
         construirTablero();
     }
 
+    //~ListaEnlazadaTablero();
+
     void construirTablero();
 
-    bool marcarLinea(int x, int y, char direccion);
+    bool marcarLinea(int x, int y, char direccion, char inicial);
 
     NodoTablero* obtenerNodo(int x, int y);
 
     void mostrarTablero();
-};
 
+    void marcarCuadro(int x, int y, char inicial);
+
+    bool cuadroCerrado(int fila, int columna);
+
+    int contarCuadros(char jugador);
+
+    //bool eliminarCuadro(int x, int y);
+
+    //bool agregarCuadro(int x, int y);
+
+    bool juegoTerminado();
+};
 
 
 

@@ -14,11 +14,28 @@ add_executable(Practica1_EDD main.cpp
         Objetos/Jugador.h
         UTILIDADES/Juego.cpp
         UTILIDADES/Juego.h
-        Objetos/PowerUp.cpp
-        Objetos/PowerUp.h
+        Objetos/PowerUps/PowerUp.cpp
+        Objetos/PowerUps/PowerUp.h
         Estructuras/Cola/NodoCola.cpp
         Estructuras/Cola/NodoCola.h
         Estructuras/Pila/NodoPila.cpp
         Estructuras/Pila/NodoPila.h
         Estructuras/ListaEnlazada/NodoTablero.cpp
-        Estructuras/ListaEnlazada/NodoTablero.h)
+        Estructuras/ListaEnlazada/NodoTablero.h
+        Objetos/PowerUps/DobleLinea.cpp
+        Objetos/PowerUps/DobleLinea.h
+        Objetos/PowerUps/TrampaSecreta.cpp
+        Objetos/PowerUps/TrampaSecreta.h
+        Objetos/PowerUps/Bloqueo.cpp
+        Objetos/PowerUps/Bloqueo.h
+        Objetos/PowerUps/LlaveSecreta.cpp
+        Objetos/PowerUps/LlaveSecreta.h
+        Objetos/PowerUps/Pase.cpp
+        Objetos/PowerUps/Pase.h
+        Objetos/PowerUps/Escurridizo.cpp
+        Objetos/PowerUps/Escurridizo.h
+        Objetos/PowerUps/PowerUpWrapper.cpp
+        Objetos/PowerUps/PowerUpWrapper.h
+        Objetos/GeneradorPoderes.cpp
+        Objetos/GeneradorPoderes.h
+)

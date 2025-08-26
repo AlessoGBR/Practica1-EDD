@@ -5,7 +5,6 @@
 #include "Juego.h"
 
 
-
 Juego::Juego(int fila, int columas, vector<Jugador> &jugadores) : tablero(fila, columas) {
     this->filas = fila;
     this->columnas = columas;
@@ -16,7 +15,6 @@ Juego::Juego(int fila, int columas, vector<Jugador> &jugadores) : tablero(fila, 
 }
 
 Juego::~Juego() {
-
 }
 
 void Juego::menu() {
@@ -41,8 +39,7 @@ void Juego::menu() {
             break;
         case 0:
             cout << "SALIENDO DEL JUEGO" << endl;
-
-            break;
+            std::exit(0);
         default:
             cout << "OPCION NO VALIDA..." << endl;
             menu();
@@ -54,25 +51,36 @@ void Juego::menu() {
 void Juego::jugar() {
     while (!finJuego) {
         tablero.mostrarTablero();
+
         jugadorActual = this->turnos.desencolar();
-        cout << "TURNO DEL JUGADOR: " << jugadorActual->nombre << endl;
+        cout << "TURNO DEL JUGADOR: " << jugadorActual->getNombre() << endl;
 
-        int fila;
-        int columna;
+        int fila, columna;
         char dir;
-        cout << "INGRESE DE LA FILA" << endl;
+        cout << "INGRESE LA FILA: ";
         cin >> fila;
-        cout << "INGRESE LA COLUMNA" << endl;
+        cout << "INGRESE LA COLUMNA: ";
         cin >> columna;
-        cout << "INGRESE LA DIRECCION (R/D)" << endl;
+        cout << "INGRESE LA DIRECCION (H (HORIZONTAL)/ V (VERTICAL): ";
         cin >> dir;
-        if (tablero.marcarLinea(fila, columna, toupper(dir))) {
-            tablero.mostrarTablero();
-            cout << "TURNO FINALIZADO JUGADOR: " << jugadorActual->nombre << endl;
-            turnos.encolar(jugadorActual);
-            cout << "TURNO DEL JUGADOR: " << jugadorActual->nombre << endl;
+        dir = toupper(dir);
 
+        bool cerro = tablero.marcarLinea(fila, columna, dir, jugadorActual->getInicial());
+        tablero.mostrarTablero();
+        if (cerro) {
+            jugadorActual->agregarPunto();
+            cout << "CUADRO CERRADO POR " << jugadorActual->getNombre() << " SUMAS UN PUNTO" << endl;
+            cout << "CONTINUA JUGANDO " << jugadorActual->getNombre() << endl;
+        } else {
+            turnos.encolar(jugadorActual);
+            cout << "TURNO FINALIZADO: " << jugadorActual-> getNombre() << endl;
         }
+
+        if (tablero.juegoTerminado()) {
+            finJuego = true;
+            cout << "¡Juego terminado!" << endl;
+        }
+
         menu();
     }
 }

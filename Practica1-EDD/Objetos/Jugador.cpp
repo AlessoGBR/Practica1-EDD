@@ -11,20 +11,12 @@
 Jugador::Jugador(string nombre, char inicial) : nombre(nombre), inicial(inicial) {
     this->nombre = nombre;
     this->inicial = inicial;
-    this->puntuacion = 0;
-    this->poderes = new Pila();
+    this->puntos = 0;
 }
 
 void Jugador::mostrarJugador() {
-    std::cout << "JUGADOR: " << nombre << " PUNTUACION: " << puntuacion << " CARACTER: " << inicial << std::endl;
+    std::cout << "JUGADOR: " << nombre << " PUNTUACION: " << puntos << " CARACTER: " << inicial << std::endl;
 }
 
-void Jugador::mostrarPuntuacion() const {
-    std::cout << "PUNTUACION: " << this->puntuacion << std::endl;
-}
-
-void Jugador::mostrarPoderes() const {
-    //this->poderes->mostrar();
-}
 
 

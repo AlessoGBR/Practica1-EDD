@@ -4,14 +4,21 @@
 
 #ifndef PRACTICA1_EDD_NODOPIAL_H
 #define PRACTICA1_EDD_NODOPIAL_H
-#include <string>
-#include "../../Objetos/PowerUp.h"
+#include "../../Objetos/PowerUps/PowerUpWrapper.h"
+class PowerUpWrapper;
+
 class NodoPila {
 public:
-    PowerUp dato;
+    PowerUpWrapper dato;
     NodoPila* siguiente;
 
-    NodoPila(PowerUp d) : dato(d), siguiente(nullptr) {}
+    NodoPila(PowerUpWrapper& d) : dato(d), siguiente(nullptr) {}
+
+    NodoPila(const PowerUpWrapper& d) : dato(d), siguiente(nullptr) {}
+
+    NodoPila() : dato(), siguiente(nullptr) {}
+
+    ~NodoPila() = default;
 };
 
 
