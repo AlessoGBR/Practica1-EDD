@@ -38,4 +38,8 @@ add_executable(Practica1_EDD main.cpp
         Objetos/PowerUps/PowerUpWrapper.h
         Objetos/GeneradorPoderes.cpp
         Objetos/GeneradorPoderes.h
+        UTILIDADES/GestorFinJuego.cpp
+        UTILIDADES/GestorFinJuego.h
+        UTILIDADES/EstadisticasJugador.cpp
+        UTILIDADES/EstadisticasJugador.h
 )

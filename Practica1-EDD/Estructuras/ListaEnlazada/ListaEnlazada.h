@@ -13,7 +13,7 @@ using namespace std;
 
 class ListaEnlazadaTablero {
 private:
-    NodoTablero* inicio;
+    NodoTablero *inicio;
     int filas, columnas;
 
 public:
@@ -24,13 +24,13 @@ public:
         construirTablero();
     }
 
-    //~ListaEnlazadaTablero();
+    ~ListaEnlazadaTablero();
 
     void construirTablero();
 
     bool marcarLinea(int x, int y, char direccion, char inicial);
 
-    NodoTablero* obtenerNodo(int x, int y);
+    NodoTablero *obtenerNodo(int x, int y);
 
     void mostrarTablero();
 
@@ -40,14 +40,24 @@ public:
 
     int contarCuadros(char jugador);
 
-    //bool eliminarCuadro(int x, int y);
-
-    //bool agregarCuadro(int x, int y);
-
     bool juegoTerminado();
+
+    bool agregarFilaAlFinal();
+
+    bool agregarColumnaAlFinal();
+
+    bool eliminarUltimaFila();
+
+    bool eliminarUltimaColumna();
+
+    bool eliminarNodo(int x, int y);
+
+    bool estaEnBorde(int x, int y);
+
+    bool esSeguroEliminar(int x, int y);
+
+    void reconstruirConexiones();
 };
-
-
 
 
 #endif //LISTAENLAZADA_H

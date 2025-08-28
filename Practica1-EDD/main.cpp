@@ -25,10 +25,10 @@ int main() {
     int fila;
     int columna;
     do {
-        std::cout << "INGRESE LA CANTIDAD DE JUGADORES (2-5): ";
+        std::cout << "INGRESE LA CANTIDAD DE JUGADORES (MINIMO 2): ";
         std::cin >> numJugadores;
         std::cin.ignore();
-    } while (numJugadores < 2 || numJugadores > 5);
+    } while (numJugadores < 2);
     std::vector<Jugador> jugadores;
     for (int i = 0; i < numJugadores; ++i) {
         std::string nombre;
@@ -37,13 +37,19 @@ int main() {
         char primerCaracter = toupper(nombre.at(0));
         jugadores.push_back(Jugador(nombre, primerCaracter));
     }
-    std::cout << "MINIMO DE 3*3" << std::endl;
-    std::cout << "INGRESE EL TAMANIO DE LAS FILAS: " << std::endl;
-    std::cin >> fila;
-    std::cout << "INGRESE EL TAMANIO DE LAS COLUMNAS: " << std::endl;
-    std::cin >> columna;
+    do {
+        std::cout << "INGRESE EL TAMANIO DEL TABLERO (MINIMO DE 3*3):" << std::endl;
+        std::cout << "=============================" << std::endl;
+        std::cout << "INGRESE EL NUMERO DE LAS FILAS: " << std::endl;
+        std::cin >> fila;
+        std::cout << "INGRESE EL NUMERO DE LAS COLUMNAS: " << std::endl;
+        std::cin >> columna;
+    } while (fila < 2 || columna < 2 );
+
+
     Juego juego = Juego(fila, columna, jugadores);
 
     juego.menu();
+
     return 0;
 }
