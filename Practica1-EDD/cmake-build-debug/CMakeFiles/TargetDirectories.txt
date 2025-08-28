@@ -1,0 +1,3 @@
+/home/alesso/Desktop/Practica1-EDD/Practica1-EDD/cmake-build-debug/CMakeFiles/Practica1_EDD.dir
+/home/alesso/Desktop/Practica1-EDD/Practica1-EDD/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alesso/Desktop/Practica1-EDD/Practica1-EDD/cmake-build-debug/CMakeFiles/rebuild_cache.dir

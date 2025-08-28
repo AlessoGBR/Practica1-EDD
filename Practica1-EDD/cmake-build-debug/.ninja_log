@@ -1,0 +1,23 @@
+# ninja log v6
+3	421	1756200385355703797	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUps/TrampaSecreta.cpp.o	67758e1378f3c79d
+2	13	1756199737714066380	CMakeFiles/Practica1_EDD.dir/Estructuras/Cola/NodoCola.cpp.o	f5aea36fb7de6518
+3	282	1756200769668430339	CMakeFiles/Practica1_EDD.dir/Estructuras/Cola/Cola.cpp.o	1e121021df67338c
+3	567	1756200574355099131	CMakeFiles/Practica1_EDD.dir/Objetos/GeneradorPoderes.cpp.o	e1e89fe780ffa6de
+2	333	1756358576267531364	CMakeFiles/Practica1_EDD.dir/Estructuras/ListaEnlazada/ListaEnlazada.cpp.o	279513694847446f
+3	428	1756200035070151806	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUps/Escurridizo.cpp.o	bbc190ee3327be39
+6	511	1756199040017915528	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUps/DobleLinea.cpp.o	b6920a5a5d76dd50
+5	34	1755682725896795831	CMakeFiles/Practica1_EDD.dir/Estructuras/ListaEnlazada/NodoTablero.cpp.o	c56f13e37cc3c806
+1	479	1756358576266907861	CMakeFiles/Practica1_EDD.dir/main.cpp.o	60c5f517fdb89381
+3	508	1756199054102823013	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUps/PowerUp.cpp.o	b561b750d3978d24
+3	396	1756200574354728340	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUps/Pase.cpp.o	cad0b265b4d0745c
+2	677	1756358576267862435	CMakeFiles/Practica1_EDD.dir/UTILIDADES/GestorFinJuego.cpp.o	fa2ed7844896fd2d
+3	402	1756289517844512505	CMakeFiles/Practica1_EDD.dir/UTILIDADES/EstadisticasJugador.cpp.o	8af539315b7b83b8
+2	435	1756362441357756980	CMakeFiles/Practica1_EDD.dir/UTILIDADES/Juego.cpp.o	1b2d01a3aae43866
+435	489	1756362441790755921	Practica1_EDD	c4039207c84a74fa
+3	519	1756200425322136347	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUps/LlaveSecreta.cpp.o	fd95d2eb18ae010c
+3	498	1756200574354893221	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUps/PowerUpWrapper.cpp.o	59fcc5445dc712b6
+2	15	1756199517346661715	CMakeFiles/Practica1_EDD.dir/Estructuras/Pila/Pila.cpp.o	38b2bb84a1164366
+2	332	1755684346651933438	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUp.cpp.o	85114c150b15c9b3
+3	412	1756200574354540159	CMakeFiles/Practica1_EDD.dir/Estructuras/Pila/NodoPila.cpp.o	8fc7ae1dff30c79b
+3	15	1756199817145475165	CMakeFiles/Practica1_EDD.dir/Objetos/PowerUps/Bloqueo.cpp.o	258de10eb2ee7b4b
+2	412	1756200788600437232	CMakeFiles/Practica1_EDD.dir/Objetos/Jugador.cpp.o	96b097a803c1be16
